@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A50101"
+    tools:context=".MusicPlayActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/music_title"
+        android:text="@string/songs_s_title"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_margin="20sp"
+        android:padding="20sp"
+        />
+
+    <ImageView
+        android:layout_width="300sp"
+        android:layout_height="300sp"
+        android:id="@+id/apollo_media_icon"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/controls"
+        android:padding="20sp"
+        android:src="@drawable/apollo_media_icon"
+        android:contentDescription="@string/todo"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/controls"
+        android:padding="40sp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/seekbar"
+            android:layout_margin="20sp"
+            android:layout_alignParentStart="true"
+            android:id="@+id/current_time"
+            android:text="@string/_0_00"
+            android:textColor="@color/white"
+            />
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekbar"
+            android:layout_margin="10sp"
+            android:backgroundTint="@color/white"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20sp"
+            android:layout_below="@id/seekbar"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/total_time"
+            android:text="@string/__0_00"
+            android:textColor="@color/white"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/total_time"
+            android:padding="20sp"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/previous"
+                android:src="@drawable/ic_baseline_skip_previous_24"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/next"
+                android:src="@drawable/ic_baseline_skip_next_24"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:id="@+id/play_pause"
+                android:src="@drawable/ic_baseline_pause_circle_outline_24"
+                />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
